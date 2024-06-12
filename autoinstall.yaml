@@ -38,8 +38,8 @@ autoinstall:
   late-commands:
     - curtin in-target -- wget https://repo2.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.3-3_all.deb
     - curtin in-target -- dpkg -i ./protonvpn-stable-release_1.0.3-3_all.deb
-    - curtin in-target -- apt update
-    - curtin in-target -- apt install -y proton-vpn-gnome-desktop
+    - curtin in-target -- sudo apt update
+    - curtin in-target -- sudo apt install -y proton-vpn-gnome-desktop
     - curtin in-target -- curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
     - curtin in-target -- sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
     - curtin in-target -- sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-$(lsb_release -cs)-prod $(lsb_release -cs) main" > /etc/apt/sources.list.d/dotnetdev.list'

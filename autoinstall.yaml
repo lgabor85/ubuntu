@@ -3,7 +3,7 @@ autoinstall:
   identity:
     hostname: ubuntu-lgabor
     username: lgabor
-    password: "Or0szl@n85!"
+    password: "P@sswr0rd"
   storage:
     layout:
       name: lvm
